@@ -5,6 +5,13 @@ class MainCharacter extends Entity {
       this.items = items || {}
       this.speed = speed || 1
       this.lives = lives || 100
+
+      var options = {
+        friction: 0.3,
+        restitution: 0.6
+      }
+       this.body = Bodies.rectangle(this.position.x, this.position.y, this.size.w, this.size.h, options);
+       //World.add(world, this.body);
       
       // this.speed = createVector()
     }
